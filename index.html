@@ -24,27 +24,27 @@
 <body class="lexend">
 
     <!-- <header> -->
-        <div class="w-full  mx-auto max-sm:w-full sticky top-0 z-50  ">
-            <nav class="lg:w-full px-5 mx-auto   ">
-                <!-- navber -->
-                <div class="">
-                    <div
-                        class="flex items-center justify-between px-10 h-[97px] bg-red-50 max-sm:flex max-sm:justify-around max-sm:px-2 max-sm:items-center ">
-                        <button id="btn-blog" class="bg-[#B4F461] rounded-lg px-6 py-2 font-bold text-xl  ">Blog</button>
-                        <div class="flex items-center  gap-3 ">
-                            <img src="./assets/logo.png" alt="">
-                            <h1 class="text-[#111111] font-bold text-xl max-sm:hidden">Donate Bangladesh</h1>
-                        </div>
-                        <!-- coin -->
-                        <div class="flex gap-3 ">
-                            <img src="./assets/coin.png" alt="">
-                            <h1 id="my-cedit" class="text-xl font-bold opacity-60">5500 BDT</h1>
-                        </div>
+    <div class="w-full  mx-auto max-sm:w-full sticky top-0 z-50  ">
+        <nav class="lg:w-full px-5 mx-auto   ">
+            <!-- navber -->
+            <div class="">
+                <div
+                    class="flex items-center justify-between px-10 h-[97px] bg-red-50 max-sm:flex max-sm:justify-around max-sm:px-2 max-sm:items-center ">
+                    <button id="btn-blog" class="bg-[#B4F461] rounded-lg px-6 py-2 font-bold text-xl  ">Blog</button>
+                    <div class="flex items-center  gap-3 ">
+                        <img src="./assets/logo.png" alt="">
+                        <h1 class="text-[#111111] font-bold text-xl max-sm:hidden">Donate Bangladesh</h1>
+                    </div>
+                    <!-- coin -->
+                    <div class="flex gap-3 ">
+                        <img src="./assets/coin.png" alt="">
+                        <h1 id="my-cedit" class="text-xl font-bold opacity-60">5500 BDT</h1>
                     </div>
                 </div>
-                <!-- navber end -->
-            </nav>
-        </div>
+            </div>
+            <!-- navber end -->
+        </nav>
+    </div>
     </header>
 
 
@@ -53,10 +53,11 @@
         <!-- two button -->
         <div class="mb-10">
             <div class=" gap-4 flex w-fit mx-auto ">
-                <button id="btn-show-donation" class="text-xl font-bold bg-[#B4F461] rounded-lg px-6 py-2 ">Donation</button>
+                <button id="btn-show-donation"
+                    class="text-xl font-bold bg-[#B4F461] rounded-lg px-6 py-2 ">Donation</button>
                 <button id="btn-show-history"
                     class="text-xl font-bold text-[#111111] opacity-70 bg-[#adf1e94d] px-6 py-2 rounded-lg border-red-500 border-2">History</button>
-                
+
 
             </div>
         </div>
@@ -108,7 +109,8 @@
             <!-- this is a right side card design -->
             <div class="mx-3">
                 <div>
-                    <button id="btn-add-coin-feni" class="px-5 py-2 mt-4 rounded-xl flex gap-2 bg-[#1111110D] items-center">
+                    <button id="btn-add-coin-feni"
+                        class="px-5 py-2 mt-4 rounded-xl flex gap-2 bg-[#1111110D] items-center">
                         <img src="./assets/coin.png" alt="">
                         <span>600 BDT</span>
                     </button>
@@ -125,7 +127,8 @@
                         <div>
                             <input id="donate-input-feni" class="border rounded-md mt-2 w-11/12 py-3" type="text"
                                 placeholder="Write Donation Amount">
-                            <button id="btn-donate-feni" class="bg-[#B4F461] w-11/12 mt-5 p-4 rounded-lg">Donate now</button>
+                            <button id="btn-donate-feni" class="bg-[#B4F461] w-11/12 mt-5 p-4 rounded-lg">Donate
+                                now</button>
                         </div>
                     </div>
                 </div>
@@ -142,7 +145,8 @@
             <!-- this is a right side card design -->
             <div class="mx-3">
                 <div>
-                    <button id="btn-add-coin-quota" class="px-5 py-2 mt-4 rounded-xl flex gap-2 bg-[#1111110D] items-center">
+                    <button id="btn-add-coin-quota"
+                        class="px-5 py-2 mt-4 rounded-xl flex gap-2 bg-[#1111110D] items-center">
                         <img src="./assets/coin.png" alt="">
                         <span>0 BDT</span>
                     </button>
@@ -159,7 +163,8 @@
                         <div>
                             <input id="donate-input-quota" class="border rounded-md mt-2 w-11/12 py-3" type="text"
                                 placeholder="Write Donation Amount">
-                            <button id="btn-donate-quota" class="bg-[#B4F461] w-11/12 mt-5 p-4 rounded-lg">Donate now</button>
+                            <button id="btn-donate-quota" class="bg-[#B4F461] w-11/12 mt-5 p-4 rounded-lg">Donate
+                                now</button>
                         </div>
                     </div>
                 </div>
@@ -167,6 +172,11 @@
         </div>
         <!-- donate for quta end -->
     </main>
+
+    <!-- history of donation -->
+    <section id="donationHistory" class=" md:w-9/12 md:mx-auto mt-6 hidden  ">
+        <div id="history-list" class="flex flex-col gap-4"></div>
+    </section>
 
     <script src="js/index.js"></script>
     <script src="js/blog.js"></script>

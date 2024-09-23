@@ -22,21 +22,25 @@ document.getElementById('btn-donate').addEventListener('click', function (event)
     let creditDonate = myCredit - donateInput;
     document.getElementById('my-cedit').innerText = creditDonate.toFixed(2);
 
-//     // history part for one
 
-//     const historyItem = document.createElement("div");
 
-//     historyItem.className = "bg-white rounded-md border border-indigo-500";
+     // history part for one
 
-//     historyItem.innerHTML = `
-// <p class="font-bold px-3 py-2"> ${btn - add - coin} Taka is Donate for Flood at Noakhali, Bangladesh</p>
+     let historyItem = document.createElement("div");
 
-// <p class="font-bold px-3 py-2"> Date: ${new Date().toLocaleDateString()}</p>
-// `;
+     historyItem.className ="bg-white rounded-md border border-indigo-500";
+     
+     historyItem.innerHTML= `
+     <p class="font-bold px-3 py-2"> ${donateInput} Taka is Donate for Flood at Noakhali, Bangladesh</p>
+     
+     <p class="font-bold px-3 py-2"> Date: ${new Date().toLocaleDateString()}</p>
+     `;
+     
+     const historyContainer = document.getElementById('history-list');
+     
+     historyContainer.insertBefore(historyItem, historyContainer.firstChild)
+     
 
-//     const historyContainer = document.getElementById("history-list");
-
-//     historyContainer.insertBefore(historyItem, historyContainer.firstChild)
 })
 
 
@@ -67,6 +71,25 @@ document.getElementById('btn-donate-feni').addEventListener('click', function (e
 
 
 
+    
+    // history for  two
+
+    const historyItem = document.createElement("div");
+
+historyItem.className ="bg-white rounded-md border border-indigo-500";
+
+historyItem.innerHTML= `
+<p class="font-bold px-3 py-2"> ${donateInputFeni}  Taka is Donated for Flood Relief in Feni,Bangladesh</p>
+
+<p class="font-bold px-3 py-2"> Date: ${new Date().toLocaleDateString()}</p>
+`;
+
+const historyContainer = document.getElementById("history-list");
+
+historyContainer.insertBefore(historyItem, historyContainer.firstChild)
+
+
+
 })
 
 // quotar calculation
@@ -91,6 +114,25 @@ document.getElementById('btn-donate-quota').addEventListener('click', function (
 
     let creditDonateQuota = myCreditQuota - donateInputQuota;
     document.getElementById('my-cedit').innerText = creditDonateQuota.toFixed(2);
+
+
+
+    
+    // history for quota
+
+    const historyItem = document.createElement("div");
+
+historyItem.className ="bg-white rounded-md border border-indigo-500";
+
+historyItem.innerHTML= `
+<p class="font-bold px-3 py-2"> ${donateInputQuota}  Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
+
+<p class="font-bold px-3 py-2"> Date: ${new Date().toLocaleDateString()}</p>
+`;
+
+const historyContainer = document.getElementById("history-list");
+
+historyContainer.insertBefore(historyItem, historyContainer.firstChild)
 })
 
 
@@ -99,6 +141,37 @@ document.getElementById('btn-blog').addEventListener('click', function () {
     window.location.href = './blog.html'
 })
 
+
+
+
+
+
+// history button 
+
+let historyTab = document.getElementById('btn-show-history');
+let donationTab = document.getElementById('btn-show-donation');
+historyTab.addEventListener('click', function(){
+
+    historyTab.classList.add( 'bg-yellow-200');
+
+
+    donationTab.classList.remove('bg-yellow-200');
+
+    document.getElementById('cards-donation').classList.add('hidden');
+
+    document.getElementById('donationHistory').classList.remove('hidden');
+})
+
+donationTab.addEventListener('click', function(){
+    donationTab.classList.add('bg-yellow-200')
+
+    historyTab.classList.remove('bg-yellow-200');
+
+    document.getElementById('cards-donation').classList.remove('hidden');
+
+    document.getElementById("donationHistory").classList.add("hidden");
+
+})
 
 
 
