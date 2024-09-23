@@ -22,35 +22,36 @@
 </head>
 
 <body class="lexend">
-    
-    <header>
-        <div class="w-full  mx-auto max-sm:w-full  ">
-            <nav class="lg:w-10/12 mx-auto max-sm:flex sm:justify-between sm:items-center sm:flex-col">
+
+    <!-- <header> -->
+        <div class="w-full  mx-auto max-sm:w-full sticky top-0 z-50  ">
+            <nav class="lg:w-10/12 mx-auto   ">
                 <!-- navber -->
-            <div class="">
-                <div class="flex items-center justify-between px-10 h-[97px] bg-red-50 max-sm:flex max-sm:justify-center max-sm:items-center ">
-                    <button class="bg-[#B4F461] rounded-lg px-6 py-2 font-bold text-xl  ">Blog</button>
-                    <div class="flex items-center  gap-3 ">
-                        <img src="./assets/logo.png" alt="">
-                        <h1 class="text-[#111111] font-bold text-xl">Donate Bangladesh</h1>
-                    </div>
-                    <!-- coin -->
-                    <div class="flex gap-3 ">
-                        <img src="./assets/coin.png" alt="">
-                        <h1 class="text-xl font-bold opacity-60">5500 BDT</h1>
+                <div class="">
+                    <div
+                        class="flex items-center justify-between px-10 h-[97px] bg-red-50 max-sm:flex max-sm:justify-around max-sm:px-2 max-sm:items-center ">
+                        <button class="bg-[#B4F461] rounded-lg px-6 py-2 font-bold text-xl  ">Blog</button>
+                        <div class="flex items-center  gap-3 ">
+                            <img src="./assets/logo.png" alt="">
+                            <h1 class="text-[#111111] font-bold text-xl max-sm:hidden">Donate Bangladesh</h1>
+                        </div>
+                        <!-- coin -->
+                        <div class="flex gap-3 ">
+                            <img src="./assets/coin.png" alt="">
+                            <h1 id="my-cedit" class="text-xl font-bold opacity-60">5500 BDT</h1>
+                        </div>
                     </div>
                 </div>
-            </div>
                 <!-- navber end -->
             </nav>
         </div>
     </header>
 
-    
+
     <!-- main -->
     <main class="w-full mx-auto mt-20 px-16 max-sm:w-full max-sm:px-2">
         <!-- two button -->
-        <div>
+        <div class="mb-10">
             <div class=" gap-4 flex w-fit mx-auto ">
                 <button class="text-xl font-bold bg-[#B4F461] rounded-lg px-6 py-2 ">Donation</button>
                 <button
@@ -60,16 +61,17 @@
         <!-- two button end -->
 
 
-    
+
+
         <!-- donate for noakhali start -->
-        <div class="xl:flex px-2 py-2 justify-center gap-5">
+        <div class="xl:flex px-5 py-5 justify-center gap-5 border-2 rounded-lg border-red-100 w-fit mx-auto">
             <div class="rounded-md mt-4 xl:flex">
                 <img class="max-sm:w-full  md:w-full lg:w-full xl:w-full" src="./assets/noakhali.png " alt="">
             </div>
             <!-- this is a right side card design -->
             <div class="mx-3">
                 <div>
-                    <button class="px-5 py-2 mt-4 rounded-xl flex gap-2 bg-[#1111110D] items-center">
+                    <button id="btn-add-coin" class="px-5 py-2 mt-4 rounded-xl flex gap-2 bg-[#1111110D] items-center">
                         <img src="./assets/coin.png" alt="">
                         <span>0 BDT</span>
                     </button>
@@ -83,9 +85,11 @@
                             those affected by this disaster. Every contribution, big or small, makes difference. Please
                             join us in supporting the relief efforts and making a positive impact on the lives of those
                             in need.</p>
-                     <div>
-                        <input class="border rounded-md mt-2 w-11/12 py-3" type="text" placeholder="Write Amount">
-                     </div>
+                        <div>
+                            <input id="input-donation" class="border rounded-md mt-2 w-11/12 py-3" type="text"
+                                placeholder="Write Donation Amount">
+                            <button id="btn-donate" class="bg-[#B4F461] w-11/12 mt-5 p-4 rounded-lg">Donate now</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -93,9 +97,9 @@
         <!-- donate for noakhali end -->
 
 
-    
+
         <!-- donate for feni start -->
-        <div class="xl:flex px-2 py-2 justify-center gap-5">
+        <div class="xl:flex px-5 py-5 justify-center gap-5 border-2 rounded-lg border-red-100 w-fit mx-auto my-10">
             <div class="rounded-md mt-4 xl:flex">
                 <img class="max-sm:w-full  md:w-full lg:w-full xl:w-full" src="./assets/feni.png " alt="">
             </div>
@@ -109,22 +113,27 @@
                     <br>
                     <!-- text -->
                     <div class="md:w-[522px] lg:w-[522px]  mx-auto">
-                        <h1 class="font-bold text-xl">Donate for Flood at noakhali, Bangladesh</h1>
+                        <h1 class="font-bold text-xl">Donate for Flood Relief in Feni,Bangladesh</h1>
                         <br>
                         <p class="text-[#111111B3] text-[16px]"> The recent floods in Noakhali have caused significant
                             damage to homes infrastructure. Your donation will help provide essential supplies and to
                             those affected by this disaster. Every contribution, big or small, makes difference. Please
                             join us in supporting the relief efforts and making a positive impact on the lives of those
                             in need.</p>
+                        <div>
+                            <input class="border rounded-md mt-2 w-11/12 py-3" type="text"
+                                placeholder="Write Donation Amount">
+                            <button class="bg-[#B4F461] w-11/12 mt-5 p-4 rounded-lg">Donate now</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- donate for feni end -->
 
-    
+
         <!-- donate for quta start -->
-        <div class="xl:flex px-2 py-2 justify-center gap-5">
+        <div class="xl:flex px-5 py-5 justify-center gap-5 border-2 rounded-lg border-red-100 w-fit mx-auto">
             <div class="rounded-md mt-4 xl:flex">
                 <img class="max-sm:w-full  md:w-full lg:w-full xl:w-full" src="./assets/quota-protest.png " alt="">
             </div>
@@ -145,16 +154,19 @@
                             those affected by this disaster. Every contribution, big or small, makes difference. Please
                             join us in supporting the relief efforts and making a positive impact on the lives of those
                             in need.</p>
+                        <div>
+                            <input class="border rounded-md mt-2 w-11/12 py-3" type="text"
+                                placeholder="Write Donation Amount">
+                            <button class="bg-[#B4F461] w-11/12 mt-5 p-4 rounded-lg">Donate now</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- donate for quta end -->
+
     </main>
-
-
-
-
+    <script src="js/index.js"></script>
 </body>
 
 </html>
