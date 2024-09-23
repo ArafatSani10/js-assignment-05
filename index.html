@@ -25,12 +25,12 @@
 
     <!-- <header> -->
         <div class="w-full  mx-auto max-sm:w-full sticky top-0 z-50  ">
-            <nav class="lg:w-10/12 mx-auto   ">
+            <nav class="lg:w-full px-5 mx-auto   ">
                 <!-- navber -->
                 <div class="">
                     <div
                         class="flex items-center justify-between px-10 h-[97px] bg-red-50 max-sm:flex max-sm:justify-around max-sm:px-2 max-sm:items-center ">
-                        <button class="bg-[#B4F461] rounded-lg px-6 py-2 font-bold text-xl  ">Blog</button>
+                        <button id="btn-blog" class="bg-[#B4F461] rounded-lg px-6 py-2 font-bold text-xl  ">Blog</button>
                         <div class="flex items-center  gap-3 ">
                             <img src="./assets/logo.png" alt="">
                             <h1 class="text-[#111111] font-bold text-xl max-sm:hidden">Donate Bangladesh</h1>
@@ -49,13 +49,15 @@
 
 
     <!-- main -->
-    <main class="w-full mx-auto mt-20 px-16 max-sm:w-full max-sm:px-2">
+    <main id="cards-donation" class="w-full mx-auto mt-20 px-16 max-sm:w-full max-sm:px-2">
         <!-- two button -->
         <div class="mb-10">
             <div class=" gap-4 flex w-fit mx-auto ">
-                <button class="text-xl font-bold bg-[#B4F461] rounded-lg px-6 py-2 ">Donation</button>
-                <button
+                <button id="btn-show-donation" class="text-xl font-bold bg-[#B4F461] rounded-lg px-6 py-2 ">Donation</button>
+                <button id="btn-show-history"
                     class="text-xl font-bold text-[#111111] opacity-70 bg-[#adf1e94d] px-6 py-2 rounded-lg border-red-500 border-2">History</button>
+                
+
             </div>
         </div>
         <!-- two button end -->
@@ -164,9 +166,10 @@
             </div>
         </div>
         <!-- donate for quta end -->
-
     </main>
+
     <script src="js/index.js"></script>
+    <script src="js/blog.js"></script>
 </body>
 
 </html>

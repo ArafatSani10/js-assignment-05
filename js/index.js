@@ -15,15 +15,34 @@ document.getElementById('btn-donate').addEventListener('click', function (event)
     }
     let coinNumber = parseFloat(document.getElementById('btn-add-coin').innerText);
     let totalDonate = coinNumber + donateInput;
-    document.getElementById('btn-add-coin').innerText = totalDonate;
+    document.getElementById('btn-add-coin').innerText = totalDonate.toFixed(2);
 
 
     let myCredit = parseFloat(document.getElementById('my-cedit').innerText);
     let creditDonate = myCredit - donateInput;
-    document.getElementById('my-cedit').innerText = creditDonate;
+    document.getElementById('my-cedit').innerText = creditDonate.toFixed(2);
+
+//     // history part for one
+
+//     const historyItem = document.createElement("div");
+
+//     historyItem.className = "bg-white rounded-md border border-indigo-500";
+
+//     historyItem.innerHTML = `
+// <p class="font-bold px-3 py-2"> ${btn - add - coin} Taka is Donate for Flood at Noakhali, Bangladesh</p>
+
+// <p class="font-bold px-3 py-2"> Date: ${new Date().toLocaleDateString()}</p>
+// `;
+
+//     const historyContainer = document.getElementById("history-list");
+
+//     historyContainer.insertBefore(historyItem, historyContainer.firstChild)
 })
 
-// fenir calculation
+
+
+
+// fenir
 document.getElementById('btn-donate-feni').addEventListener('click', function (event) {
     event.preventDefault();
     let donateInputFeni = parseFloat(document.getElementById('donate-input-feni').value);
@@ -32,19 +51,22 @@ document.getElementById('btn-donate-feni').addEventListener('click', function (e
     }
     else if (donateInputFeni < 0) {
         alert('Negetive Number are not allowed');
-    }
-    else {
+    } else {
         alert('Number is entered')
     }
 
     let coinNumberFeni = parseFloat(document.getElementById('btn-add-coin-feni').innerText);
     let totalDonateFeni = coinNumberFeni + donateInputFeni;
-    document.getElementById('btn-add-coin-feni').innerText = totalDonateFeni;
-
+    document.getElementById('btn-add-coin-feni').innerText = totalDonateFeni.toFixed(2);
+    // document.getElementById('my-cedit').innerText = creditDonateFeni.toFixed(2);
 
     let myCreditFeni = parseFloat(document.getElementById('my-cedit').innerText);
+
     let creditDonateFeni = myCreditFeni - donateInputFeni;
-    document.getElementById('my-cedit').innerText = creditDonateFeni;
+    document.getElementById('my-cedit').innerText = creditDonateFeni.toFixed(2);
+
+
+
 })
 
 // quotar calculation
@@ -63,11 +85,22 @@ document.getElementById('btn-donate-quota').addEventListener('click', function (
     }
     let coinNumberQuota = parseFloat(document.getElementById('btn-add-coin-quota').innerText);
     let totalDonateQuota = coinNumberQuota + donateInputQuota;
-    document.getElementById('btn-add-coin-quota').innerText = totalDonateQuota;
+    document.getElementById('btn-add-coin-quota').innerText = totalDonateQuota.toFixed(2);
 
-    let myCreditQuota = parseFloat(document.getElementById('my-cedit').innerText );
+    let myCreditQuota = parseFloat(document.getElementById('my-cedit').innerText);
 
     let creditDonateQuota = myCreditQuota - donateInputQuota;
-    document.getElementById('my-cedit').innerText  = creditDonateQuota;
-
+    document.getElementById('my-cedit').innerText = creditDonateQuota.toFixed(2);
 })
+
+
+// index to blog
+document.getElementById('btn-blog').addEventListener('click', function () {
+    window.location.href = './blog.html'
+})
+
+
+
+
+
+
