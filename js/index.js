@@ -10,22 +10,22 @@ document.getElementById('btn-donate').addEventListener('click', function (event)
     event.preventDefault();
     let donateInput = parseFloat(document.getElementById('input-donation').value);
 
-    if (isNaN(donateInput)) {
+    if (isNaN(donateInput)){
         alert('Invalid donation amount');
         return
     }
-
     else if (donateInput < 0) {
         alert('Negetive Number are not allowed')
         return
     }
 
+
     else {
         // alert('Number is entered')
- 
+
         modal.showModal();
-    
-      
+
+
     }
     let coinNumber = parseFloat(document.getElementById('btn-add-coin').innerText);
     let totalDonate = coinNumber + donateInput;
@@ -42,18 +42,28 @@ document.getElementById('btn-donate').addEventListener('click', function (event)
 
     let historyItem = document.createElement("div");
 
+    let nowTime = new Date();
+    let donationDate = nowTime.toString();
+
+
+
     historyItem.className = "bg-white rounded-md border border-indigo-500";
 
     historyItem.innerHTML = `
      <p class="font-bold px-3 py-2"> ${donateInput} Taka is Donate for Flood at Noakhali, Bangladesh</p>
      
-     <p class="font-bold px-3 py-2"> Date: ${new Date().toLocaleDateString()}</p>
+   
+     <p class="font-bold px-3 py-2"> Date: ${donationDate} </p>
 
      `;
 
-    const historyContainer = document.getElementById('history-list');
+    let historyContainer = document.getElementById('history-list');
 
     historyContainer.insertBefore(historyItem, historyContainer.firstChild)
+
+
+
+    
 
 
 })
@@ -91,18 +101,20 @@ document.getElementById('btn-donate-feni').addEventListener('click', function (e
 
     // history for  feni
 
-    const historyItem = document.createElement("div");
+    let historyItem = document.createElement("div");
+    let nowTime = new Date();
+    let donationDate = nowTime.toString();
 
     historyItem.className = "bg-white rounded-md border border-indigo-500";
 
     historyItem.innerHTML = `
 <p class="font-bold px-3 py-2"> ${donateInputFeni}  Taka is Donated for Flood Relief in Feni,Bangladesh</p>
 
-<p class="font-bold px-3 py-2"> Date: ${new Date().toLocaleDateString()}</p>
+<p class="font-bold px-3 py-2"> Date: ${donationDate} </p>
 
 `;
 
-    const historyContainer = document.getElementById("history-list");
+    let historyContainer = document.getElementById("history-list");
 
     historyContainer.insertBefore(historyItem, historyContainer.firstChild)
 
@@ -141,18 +153,20 @@ document.getElementById('btn-donate-quota').addEventListener('click', function (
 
     // history for quota
 
-    const historyItem = document.createElement("div");
+    let historyItem = document.createElement("div");
+    let nowTime = new Date();
+    let donationDate = nowTime.toString();
 
     historyItem.className = "bg-white rounded-md border border-indigo-500";
 
     historyItem.innerHTML = `
 <p class="font-bold px-3 py-2"> ${donateInputQuota}  Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
 
-<p class="font-bold px-3 py-2"> Date: ${new Date().toLocaleDateString()}</p>
+<p class="font-bold px-3 py-2"> Date: ${donationDate} </p>
 
 `;
 
-    const historyContainer = document.getElementById("history-list");
+    let historyContainer = document.getElementById('history-list');
 
     historyContainer.insertBefore(historyItem, historyContainer.firstChild)
 })
