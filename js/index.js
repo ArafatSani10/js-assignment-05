@@ -1,17 +1,31 @@
+
+let modalgId = document.getElementById('modal')
+
+
+
+
+
+
 document.getElementById('btn-donate').addEventListener('click', function (event) {
     event.preventDefault();
     let donateInput = parseFloat(document.getElementById('input-donation').value);
 
     if (isNaN(donateInput)) {
-        alert('please entered the valid Number');
+        alert('Invalid donation amount');
+        return
     }
 
     else if (donateInput < 0) {
         alert('Negetive Number are not allowed')
+        return
     }
 
     else {
-        alert('Number is entered')
+        // alert('Number is entered')
+ 
+        modal.showModal();
+    
+      
     }
     let coinNumber = parseFloat(document.getElementById('btn-add-coin').innerText);
     let totalDonate = coinNumber + donateInput;
@@ -34,6 +48,7 @@ document.getElementById('btn-donate').addEventListener('click', function (event)
      <p class="font-bold px-3 py-2"> ${donateInput} Taka is Donate for Flood at Noakhali, Bangladesh</p>
      
      <p class="font-bold px-3 py-2"> Date: ${new Date().toLocaleDateString()}</p>
+
      `;
 
     const historyContainer = document.getElementById('history-list');
@@ -51,12 +66,14 @@ document.getElementById('btn-donate-feni').addEventListener('click', function (e
     event.preventDefault();
     let donateInputFeni = parseFloat(document.getElementById('donate-input-feni').value);
     if (isNaN(donateInputFeni)) {
-        alert('please entered the valid Number');
+        alert('Invalid donation amount');
+        return
     }
     else if (donateInputFeni < 0) {
         alert('Negetive Number are not allowed');
+        return
     } else {
-        alert('Number is entered')
+        modal.showModal();
     }
 
     let coinNumberFeni = parseFloat(document.getElementById('btn-add-coin-feni').innerText);
@@ -72,7 +89,7 @@ document.getElementById('btn-donate-feni').addEventListener('click', function (e
 
 
 
-    // history for  two
+    // history for  feni
 
     const historyItem = document.createElement("div");
 
@@ -82,6 +99,7 @@ document.getElementById('btn-donate-feni').addEventListener('click', function (e
 <p class="font-bold px-3 py-2"> ${donateInputFeni}  Taka is Donated for Flood Relief in Feni,Bangladesh</p>
 
 <p class="font-bold px-3 py-2"> Date: ${new Date().toLocaleDateString()}</p>
+
 `;
 
     const historyContainer = document.getElementById("history-list");
@@ -98,13 +116,16 @@ document.getElementById('btn-donate-quota').addEventListener('click', function (
     let donateInputQuota = parseFloat(document.getElementById('donate-input-quota').value);
 
     if (isNaN(donateInputQuota)) {
-        alert('please entered the valid Number');
+        alert('Invalid donation amount');
+        return
     }
     else if (donateInputQuota < 0) {
         alert('Negetive Number are not allowed');
+        return
     }
     else {
-        alert('Number is entered')
+        // alert('Number is entered')
+        modal.showModal();
     }
     let coinNumberQuota = parseFloat(document.getElementById('btn-add-coin-quota').innerText);
     let totalDonateQuota = coinNumberQuota + donateInputQuota;
@@ -128,6 +149,7 @@ document.getElementById('btn-donate-quota').addEventListener('click', function (
 <p class="font-bold px-3 py-2"> ${donateInputQuota}  Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
 
 <p class="font-bold px-3 py-2"> Date: ${new Date().toLocaleDateString()}</p>
+
 `;
 
     const historyContainer = document.getElementById("history-list");
