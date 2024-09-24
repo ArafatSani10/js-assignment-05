@@ -24,22 +24,22 @@ document.getElementById('btn-donate').addEventListener('click', function (event)
 
 
 
-     // history part for one
+    // history part for one
 
-     let historyItem = document.createElement("div");
+    let historyItem = document.createElement("div");
 
-     historyItem.className ="bg-white rounded-md border border-indigo-500";
-     
-     historyItem.innerHTML= `
+    historyItem.className = "bg-white rounded-md border border-indigo-500";
+
+    historyItem.innerHTML = `
      <p class="font-bold px-3 py-2"> ${donateInput} Taka is Donate for Flood at Noakhali, Bangladesh</p>
      
      <p class="font-bold px-3 py-2"> Date: ${new Date().toLocaleDateString()}</p>
      `;
-     
-     const historyContainer = document.getElementById('history-list');
-     
-     historyContainer.insertBefore(historyItem, historyContainer.firstChild)
-     
+
+    const historyContainer = document.getElementById('history-list');
+
+    historyContainer.insertBefore(historyItem, historyContainer.firstChild)
+
 
 })
 
@@ -71,22 +71,22 @@ document.getElementById('btn-donate-feni').addEventListener('click', function (e
 
 
 
-    
+
     // history for  two
 
     const historyItem = document.createElement("div");
 
-historyItem.className ="bg-white rounded-md border border-indigo-500";
+    historyItem.className = "bg-white rounded-md border border-indigo-500";
 
-historyItem.innerHTML= `
+    historyItem.innerHTML = `
 <p class="font-bold px-3 py-2"> ${donateInputFeni}  Taka is Donated for Flood Relief in Feni,Bangladesh</p>
 
 <p class="font-bold px-3 py-2"> Date: ${new Date().toLocaleDateString()}</p>
 `;
 
-const historyContainer = document.getElementById("history-list");
+    const historyContainer = document.getElementById("history-list");
 
-historyContainer.insertBefore(historyItem, historyContainer.firstChild)
+    historyContainer.insertBefore(historyItem, historyContainer.firstChild)
 
 
 
@@ -117,22 +117,22 @@ document.getElementById('btn-donate-quota').addEventListener('click', function (
 
 
 
-    
+
     // history for quota
 
     const historyItem = document.createElement("div");
 
-historyItem.className ="bg-white rounded-md border border-indigo-500";
+    historyItem.className = "bg-white rounded-md border border-indigo-500";
 
-historyItem.innerHTML= `
+    historyItem.innerHTML = `
 <p class="font-bold px-3 py-2"> ${donateInputQuota}  Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
 
 <p class="font-bold px-3 py-2"> Date: ${new Date().toLocaleDateString()}</p>
 `;
 
-const historyContainer = document.getElementById("history-list");
+    const historyContainer = document.getElementById("history-list");
 
-historyContainer.insertBefore(historyItem, historyContainer.firstChild)
+    historyContainer.insertBefore(historyItem, historyContainer.firstChild)
 })
 
 
@@ -150,9 +150,9 @@ document.getElementById('btn-blog').addEventListener('click', function () {
 
 let historyTab = document.getElementById('btn-show-history');
 let donationTab = document.getElementById('btn-show-donation');
-historyTab.addEventListener('click', function(){
+historyTab.addEventListener('click', function () {
 
-    historyTab.classList.add( 'bg-yellow-200');
+    historyTab.classList.add('bg-yellow-200');
 
 
     donationTab.classList.remove('bg-yellow-200');
@@ -162,7 +162,7 @@ historyTab.addEventListener('click', function(){
     document.getElementById('donationHistory').classList.remove('hidden');
 })
 
-donationTab.addEventListener('click', function(){
+donationTab.addEventListener('click', function () {
     donationTab.classList.add('bg-yellow-200')
 
     historyTab.classList.remove('bg-yellow-200');
